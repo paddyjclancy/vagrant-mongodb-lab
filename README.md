@@ -3,7 +3,7 @@
 
 1) Clone repo
 	- Provides you with a copy of provisioning-starter-code
-2) Open <git bash>
+2) Open git bash
 3) $ cd /starter-code
 4) $ vagrant up
 	- Starts up VM server (will take some time)
