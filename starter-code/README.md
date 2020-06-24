@@ -28,6 +28,19 @@ Research how this is done. But consider how you can automate the editing of this
 > HINT: You cannot edit a file with a provisioning script so you'll have to come up with another solution.
 
 
+###### changing port (manually) #####
+
+- vagrant ssh
+- cd /etc
+- cat mongod.cong
+- sudo nano /etc/mongod.conf
+- *EDIT BINDIP --> 0.0.0.0
+- SAVE
+- sudo service mongod restart
+- Run test and pass :)
+
+
+
 
 
 

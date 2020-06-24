@@ -15,9 +15,9 @@ sudo apt-get install -y mongodb-org=3.2.20 mongodb-org-server=3.2.20 mongodb-org
 sudo service mongod start
 sudo systemctl enable mongod.service
 
-# # Prevent updates
-# echo "mongodb-org hold" | sudo dpkg --set-selections
-# echo "mongodb-org-server hold" | sudo dpkg --set-selections
-# echo "mongodb-org-shell hold" | sudo dpkg --set-selections
-# echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
-# echo "mongodb-org-tools hold" | sudo dpkg --set-selections
+# Change IP 
+#		sed = stream editor
+sudo sed -i "s,\\(^[[:blank:]]*bindIp:\\) .*,\\1 0.0.0.0," /etc/mongod.conf
+sudo service mongod restart
+
+
